@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Zen+Maru+Gothic&display=swap');
+
+/* 共通で使う設定 */
+/* 範囲を折りたたむとき→Ctrl+K→Ctrl+0　範囲を展開する時→Ctrl+K→Ctrl+J */
+* {
+    color: #333333;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    font-family: "Zen Maru Gothic", "Abril Fatface",sans-serif;
+    background-color: #FFFFFF;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+header h1 {
+    height: 80px;
+    padding: 10px 30px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+header h1 img {
+    height: 100%;
+}
+.header-text {
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.header-list {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+    gap: 10px;
+    padding: 0;
+}
+.header-list li {
+    background-color: #1E90FF;
+    color: #FFFFFF;
+    padding: 2px 50px;
+}
+
+
+/* ヒーローイメージ */
+.hero {
+    background-image: url(../img/シーサー.png);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+}
+
+.catch {
+    font-weight: bold;
+    position: absolute;
+    left: 50px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #FFFFFF;
+
+}
+.catch1 {
+    font-size: 60px;
+    top: 30px;text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+.catch2 {
+    font-size: 20px;
+    line-height: 1.6;
+    top: calc(30px + 100px + 130px);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* セクション1　アトラクティブ */
+#attractive {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+#attractive .text {
+    width: 700px;
+    padding: 40px 40px;
+    align-items: center;
+}
+#attractive .text h2 {
+    text-align: center;
+    border-bottom: 2px solid #1E90FF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+#attractive .text span {
+    color: #1E90FF;
+    font-size: 30px;
+    padding: 0 10px;
+    vertical-align: middle;
+}
+#attractive .text p {
+    text-align: left;
+    padding: 0px;
+    line-height: 1.8;
+}
+#attractive .image {
+    width: 500px;
+}
+#attractive .image img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* セクション2　スポット */
+#spots {
+    width: 100%;
+    padding: 0;
+}
+
+.spot-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.spot-intro h3 {
+    color: #1E90FF;
+    font-size: 60px;
+    font-family: "Abril Fatface",sans-serif;
+    padding: 20px 20px;
+}
+.spot-intro-image {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+}
+.spot-intro img {
+    width: 24%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.spot-lead {
+    text-align: center;
+    margin: 60px 0 40px;
+}
+.spot-lead h4 {
+    color: #00BFFF;
+    font-size: 40px;
+}
+.spot-lead span {
+    color: #FF0000;
+    font-size: 40px;
+    
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.spot-box {
+    width: 48%;
+    margin-bottom: 40px;
+}
+.spot-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.spot-box dt {
+    font-weight: bold;
+    margin: 15px 0 10px;
+    border-bottom: 2px solid #1E90FF;
+}
+.spot-box dd {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* カーソル乗った時のアニメーション */
+.header-list li, .spot-intro img, .contact a {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.header-list li:hover, .spot-intro img:hover, .contact a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ページリンク */
+.contact {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.contact a {
+    color: #00BFFF;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #ffef61;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+}
